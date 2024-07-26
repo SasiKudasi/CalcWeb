@@ -1,0 +1,151 @@
+﻿@model CalcWeb.Models.CalcModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Calculator</h1>
+
+        <h2>Addition</h2>
+        <form asp-action="add" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <h2>Subtraction</h2>
+        <form asp-action="subtract" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <h2>multiply</h2>
+        <form asp-action="Multiply" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <h2>Division</h2>
+        <form asp-action="divide" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <h2>Pow</h2>
+        <form asp-action="pow" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <h2>Root</h2>
+        <form asp-action="root" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="FirstVal">First Value</label>
+                <input type="number" class="form-control" id="FirstVal" name="FirstVal" value="@Model.FirstVal" />
+                <span asp-validation-for="FirstVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="SecondVal">Second Value</label>
+                <input type="number" class="form-control" id="SecondVal" name="SecondVal" value="@Model.SecondVal" />
+                <span asp-validation-for="SecondVal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+        <h2>Evaluate Expression</h2>
+        <form asp-action="Evaluate" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="Eval">Expression</label>
+                <input type="text" class="form-control" id="Eval" name="Eval" value="@Model.Eval" />
+                <span asp-validation-for="Eval" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Result">Result</label>
+                <input type="text" class="form-control" id="Result" name="Result" value="@Model.Result" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <div class="mt-3">           
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <div class="alert alert-danger">
+                    <strong>Error:</strong> @error.ErrorMessage
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
